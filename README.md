@@ -2,11 +2,11 @@
 
 Send Roku IR remote codes to an IR transmitter via a DB9 serial port. Works with at least the Roku 2.
 
-Provides basical up/down/select/etc control. Perfect for getting through the initial setup wizard without a Roku remote, until it connects to a network, at which point the Roku mobile app can be used as a remote.
+Provides basic up/down/select/etc control. Perfect for getting through the initial setup wizard without a Roku remote. Once initial setup is done and the Roku is connected to a network, the Roku mobile app can be used as a remote.
 
 ## Physical setup
 
-Use the following pins from a PC's DB9 serial port:
+Use the following pins from a DB9 serial port (DE-9 connector: https://en.wikipedia.org/wiki/D-subminiature):
 
 * Pin 5 - GND
 * Pin 7 - RTS
@@ -21,3 +21,5 @@ sudo ./remote
 ```
 
 Note that it needs to be run as root in order to directly control the serial port.
+
+It will auto calibrate to the proper 38k carrier frequency and then provide an input prompt to select the button codes to send.
