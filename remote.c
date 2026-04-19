@@ -281,7 +281,8 @@ void send_variants(uint8_t addr_lo, uint8_t addr_hi, uint8_t cmd_lo, uint8_t cmd
 }
 
 void send_necext(uint8_t addr_lo, uint8_t addr_hi, uint8_t cmd_lo, uint8_t cmd_hi) {
-    dump_frame("TX", addr_lo, addr_hi, cmd_lo, cmd_hi);
+    // Enable dump_frame for debugging.
+    // dump_frame("TX", addr_lo, addr_hi, cmd_lo, cmd_hi);
     send_raw_frame(addr_lo, addr_hi, cmd_lo, cmd_hi);
 }
 
